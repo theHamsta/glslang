@@ -163,7 +163,7 @@ if(${CMAKE_CXX_COMPILER_ID} MATCHES "GNU")
         # Error if there's symbols that are not found at link time.
         # add_link_options() was added in CMake 3.13 - if using an earlier
         # version don't set this - it should be caught by presubmits anyway.
-        add_link_options("-Wl,--no-undefined")
+        # add_link_options("-Wl,--no-undefined")
     endif()
 elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang" AND NOT MSVC)
     add_compile_options(-Wall -Wuninitialized -Wunused -Wunused-local-typedefs
