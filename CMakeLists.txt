@@ -180,7 +180,7 @@ elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang" AND NOT MSVC)
         # Error if there's symbols that are not found at link time.
         # add_link_options() was added in CMake 3.13 - if using an earlier
         # version don't set this - it should be caught by presubmits anyway.
-        add_link_options("-Wl,-undefined,error")
+        #add_link_options("-Wl,-undefined,error")
     endif()
 elseif(MSVC)
     if(NOT ENABLE_RTTI)
